@@ -8,7 +8,19 @@ class RingBuffer:
         self.storage = DoublyLinkedList()
 
     def append(self, item):
-        pass
+        # if the sotrage is full
+        if len(self.storage) == self.capacity:
+            #check which element is the  oldest
+
+            #overwrite the oldest element
+
+            #inster the new element on the place of the oldest element
+
+            pass
+        # if is not full
+        else:
+            #insert to the tail until we reach max capacity
+            pass
 
     def get(self):
         # Note:  This is the only [] allowed
