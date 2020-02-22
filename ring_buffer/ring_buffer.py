@@ -35,6 +35,14 @@ class RingBuffer:
         list_buffer_contents = []
 
         # TODO: Your code here
+        # set the current value
+        self.current = self.storage.head
+        # while the current is not none which means is at the tail
+        while self.current is not None:
+            # append to list
+            list_buffer_contents.append(self.current.value)
+            # set current to next to keep moving
+            self.current = self.current.next
 
         return list_buffer_contents
 
