@@ -31,6 +31,10 @@ for name in names_2:
     if my_name_1.contains(name):
         duplicates.append(name)
 
+# Because we iterate on names_2 array and then basically copare it to one half of the second array
+# Runtime O(n log n)
+
+
 end_time = time.time()
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print(f"runtime: {end_time - start_time} seconds")
