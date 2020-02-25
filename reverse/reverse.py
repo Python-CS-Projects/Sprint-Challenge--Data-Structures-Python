@@ -44,15 +44,19 @@ class LinkedList:
         return False
 
     def reverse_list(self):
-        prev_value = None
-        curr_value = self.head
-        # While next value is not None
-        while curr_value is not None:
-            # swap values
-            next_value = curr_value.get_next()
-            curr_value.next = prev_value
-            prev = curr_value
-            curr_value = next_value
-            # return
-
-        self.head = prev
+        # TO BE COMPLETED
+        # current head #[*1*,2,3]
+        currentValue = self.head  # [*1*,2,3]
+        prevValue = None
+        # while currentValue is not None continue
+        while currentValue is not None:
+            # get the next value after the head
+            nextValue = currentValue.get_next()  # [1, *2*, 3]
+            # set prev as the next value of the current value
+            currentValue.set_next(prevValue)  # [ 2, 3, 1, *None*]
+            # prev value is now equa l to current
+            prevValue = currentValue  # [ 2, 3, *1*, None]
+            # finally the current is se the the original next
+            currentValue = nextValue  # [ *2*, 3, 1, None]
+        # set the head valu as the prevValue
+        self.head = prevValue
